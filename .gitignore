@@ -1,0 +1,37 @@
+auxpi
+auxpi.tar.gz
+siteConfig.conf
+*.lock
+*.tmp
+.idea
+.idea/*
+public/upload/*
+*.log
+resource/node_modules
+build/
+.well-known
+.well-known/*
+*.memprof
+*.pprof
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.idea
+*.log
+main
+.key
+.crt
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+db/auxpi.db
+conf/install.lock
+conf/siteConfig.json
