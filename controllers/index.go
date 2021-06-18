@@ -14,11 +14,14 @@
 package controllers
 
 import (
+	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	auxpi "github.com/auxpi/auxpiAll"
 	"github.com/auxpi/bootstrap"
 	auxpiLog "github.com/auxpi/log"
 	"github.com/auxpi/models"
+	"github.com/gookit/color"
 )
 
 type PagesController struct {
@@ -35,13 +38,18 @@ func (i *PagesController) commonStyle() {
 	}
 
 	Stores := models.GetActiveStore()
+	color.Red.Print(Stores)
 	i.Data["Stores"] = Stores
-	beego.Alert(Stores[0].Rank)
+	logs.Alert(Stores[0].Rank)
 	if un != "" {
 		i.Data["IsLogin"] = true
 		i.Data["UserName"] = un
 	}
-
+	fmt.Println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+	for key, value := range i.Data {
+		fmt.Printf("%s=>%s\n", key, value)
+	}
+	color.Cyan.Println("wocccccccc")
 	i.Data["siteName"] = site.SiteName
 	i.Data["siteUrl"] = site.SiteUrl
 	i.Data["siteFooterText"] = site.SiteFooter

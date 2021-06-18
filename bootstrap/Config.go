@@ -176,11 +176,11 @@ func init() {
 
 		//Db Init
 		siteconfig.DbOption.UseDb = true
-		siteconfig.DbOption.DbType = "sqlite3"
+		siteconfig.DbOption.DbType = "mysql"
 		siteconfig.DbOption.DbHost = "127.0.0.1:3306"
 		siteconfig.DbOption.DbName = "auxpi"
 		siteconfig.DbOption.DbUser = "root"
-		siteconfig.DbOption.DbPass = "root"
+		siteconfig.DbOption.DbPass = "123456"
 		siteconfig.DbOption.TablePrefix = "auxpi_"
 
 		//Auxpi Info

@@ -103,7 +103,7 @@ func init() {
 	//日志记录
 	err := logs.SetLogger(logs.AdapterFile, `{"filename":"auxpi.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10}`)
 	if err != nil {
-		beego.Alert(err)
+		logs.Alert(err)
 	}
 
 	var (
@@ -144,7 +144,7 @@ func init() {
 		options.DbOption.DbName = dbName
 		options.DbOption.DbUser = dbUser
 		options.DbOption.DbPass = dbPass
-		beego.Alert(dbPass, dbUser, dbName)
+		logs.Alert(dbPass, dbUser, dbName)
 		err := bootstrap.ReGenerateByInput(*options)
 		if err != nil {
 			fmt.Println("\033[31m[ERROR]:\033" + auxpi.ErrorToString(err))

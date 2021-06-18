@@ -9,6 +9,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gofrs/uuid v4.0.0+incompatible
+	github.com/gookit/color v1.4.2
 	github.com/gorilla/websocket v1.4.2
 	github.com/jinzhu/gorm v1.9.16
 	github.com/mailru/easyjson v0.7.7

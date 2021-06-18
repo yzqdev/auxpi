@@ -18,7 +18,6 @@ import (
 	"encoding/xml"
 	"io"
 
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/auxpi/auxpiAll"
 	"github.com/auxpi/models"
@@ -90,8 +89,8 @@ func (s *Flickr) UploadToFlickr(file io.Reader, fileName string) string {
 		return ""
 	}
 	client := flickrGetOauth()
-	beego.Alert(file)
-	beego.Alert(client)
+	logs.Alert(file)
+	logs.Alert(client)
 	resp, err := flickr.UploadReader(client, file, fileName, nil)
 	if err != nil {
 		logs.Alert("Flickr ERROR :", err)

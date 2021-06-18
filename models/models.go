@@ -12,12 +12,11 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-
 )
 
 var db *gorm.DB
 
-//定义基础的 Model 实例
+// Model 定义基础的 Model 实例
 type Model struct {
 	ID         int    `json:"id" gorm:"primary_key" `
 	CreatedOn  int    `json:"created_on" `
@@ -26,7 +25,7 @@ type Model struct {
 	CreatedDay string `json:"created_day" gorm:"size:32"`
 }
 
-//首页返回公用 Report
+// Report 首页返回公用 Report
 type Report struct {
 	Date   string `json:"date"`
 	Number int    `json:"number"`
