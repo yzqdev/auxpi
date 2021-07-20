@@ -35,3 +35,4 @@ main
 db/auxpi.db
 conf/install.lock
 conf/siteConfig.json
+go.sum
