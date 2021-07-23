@@ -5,7 +5,7 @@ import (
 
 	"github.com/auxpi/bootstrap"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 )
 
 var jwtSecret = []byte(bootstrap.SiteConfig.JwtSecret)
