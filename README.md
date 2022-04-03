@@ -1,18 +1,20 @@
 # auxpi
 
-#### 软件架构
-一个图床软件
+
+how to run 
+
+```shell
+bee run
+
+# then 
+.\auxpi-server.exe migrate
+
+.\auxpi-server.exe  -mod=admin -name=yzqdev -email=1@qq.com -pass=123456
+
+# finally 
+bee run 
+```
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
- 
+the site will be at `http://localhost:2333`
